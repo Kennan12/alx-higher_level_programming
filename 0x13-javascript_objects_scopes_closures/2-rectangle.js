@@ -2,7 +2,7 @@
 
 class Rectangle
 {
-	costructor (w, h)
+	constructor (w, h)
 	{
 		if (w > 0 && h > 0)
 		{
