@@ -1,7 +1,11 @@
 #!/usr/bin/node
 
-Exports.nbOccurences = function (list, searchElement) {
-	return list.reduce((count, item) =>
-		(item === searchElement ? count +1 : count), 0
-	);
+exports.nbOccurences = function (list, searchElement) {
+	let count = 0;
+	list.forEach((item) => {
+		if (item === searchElement) {
+			count++;
+		}
+	});
+	return count;
 };
