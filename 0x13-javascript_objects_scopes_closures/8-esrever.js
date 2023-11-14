@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-exports.eserver = function (list) 
+exports.esrever = function (list) 
 {
 	const reversedList = [];
 	const last = list.length - 1;
@@ -8,5 +8,5 @@ exports.eserver = function (list)
 	{
 		reversedList.push(list[i]);
 	}
-	return (reversedList.push(list[i]);
+	return (reversedList);
 };
