@@ -1,6 +1,7 @@
 #!/usr/bin/node
 
-exports.addMeMayybe = function (number, theFunction) {
-	number++;
-	theFunction(number);
+exports.addMeMoby = function (x, theFunction) {
+	for (let i = 0; i < x; i++) {
+	theFunction();
+	}
 };
