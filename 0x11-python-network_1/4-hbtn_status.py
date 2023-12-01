@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-same as task 0 but using request package
+Same as task 0 but using request package
 """
 
 import requests
