@@ -3,10 +3,10 @@
 https://internat.hbtn.io/status using urlib package
 """
 
-import urlib.request
+import urllib.request
 
 if __name__ == '__main__':
-    with urlib.request.urlopen('https://internat.hbtn.io/status') as request:
+    with urllib.request.urlopen('https://intranet.hbtn.io/status') as request:
         response = request.read()
         print("Body response:")
         print("\t- type: {}".format(type(response)))
