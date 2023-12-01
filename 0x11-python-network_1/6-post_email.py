@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-"""Takes a URL and an email address, sends a POST request to the passed URL"""
+"""Takes a URL and an email address, sends a POST request to the passed URL
+"""
 
 import sys
 import requests
 
-if __nmae__ == "__main__":
+if __name__ == "__main__":
     url = sys.argv[1]
     email = {'email': sys.argv[2]}
 
