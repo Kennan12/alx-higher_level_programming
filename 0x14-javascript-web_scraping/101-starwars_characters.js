@@ -1,19 +1,17 @@
 #!/usr/bin/node
+// script that gets the contents of a webpage and stores stores it in a file
 
-const r = require('request');
-const url = 'https://swapi-api.hbtn.io/api/films/' + process.argv[2];
+const url = process.argv[2];
+const file = process.argv[3];
+const req = require('request');
+const fileStream = require('fs');
 
-r.get(url, async (err, res, body) => {
-	if (err) console.log(err);
-	else {
-		for (const character of JSON.parse(body).characters) {
-			const name = await new promise((resolve, reject) => {
-				r.get(character, (err, res, body) => {
-					if (err) reject(err);
-					else resolve(JSON.parse(body).name);
-				});
-			});
-			console.log(name);
-		}
+req(url, function (error, response, body) {
+	if (error) {
+		console.log(error);
+	} else {
+		fileStream.writeFile(file, body, 'utf-8', (error) => {
+			if (error) console.log(error);
+		});
 	}
 });
