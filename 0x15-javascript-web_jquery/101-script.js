@@ -1,12 +1,11 @@
 $(document).ready(function () {
-	$('INPUT#btn_translate').click(function () {
-		$('DIV#hello').empty();
-		const language = $('INPUT#language_code').val();
-		$.getJSON('https://hellosalut.stefanbohacek.dev/?lang=fr'
-			+ language,
-			function (data) {
-				$('DIV#hello').append(data.hello);
-			}
-		);
+	$('DIV#add_item').click(function () {
+		$('UL_my_list').append('<li>Item</li>');
+	});
+	$('DIV#remove_item').click(function () {
+		$('UL.my_list').children().last().remove();
+	});
+	$('DIV#clear_list').click(function () {
+		$('UL.my_list').children().remove();
 	});
 });
